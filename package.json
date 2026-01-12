@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "build": "tsc",
+    "test": "node run build && node build/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "litra": "^4.5.1",
+    "tmi.js": "^1.8.5",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.6",
+    "@types/tmi.js": "^1.8.6"
+  }
+}
