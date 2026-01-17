@@ -21,6 +21,7 @@ FLASH_INITIAL=50
 FLASH_DURATION=2000
 ```
 
+You'll need [Node](https://nodejs.org/en), if you don't already have it.  
 `npm install` to install all packages needed.  
 
 Set your channel name to your twitch **USERNAME**.  

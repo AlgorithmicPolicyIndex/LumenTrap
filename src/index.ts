@@ -8,6 +8,7 @@ const client = new Client({
 	// * This is to handle bot accounts,
 	// See https://github.com/AlgorithmicPolicyIndex/ChatPlays/blob/main/src/Services.ts#L39-L64
 	// for more details.
+	// It is NOT required for this app to work.
 
 	// options: {
 	// 	clientId: process.env.CLIENT_ID,
@@ -54,7 +55,7 @@ client.on("redeem", async (_channel, _username, _type, _userData) => {
 		const elapsed = Date.now() - start;
 		if (elapsed >= TOTAL) {
 			devices.forEach((device) => {
-				//DEBUG console.log(`Device-${_device} lowered to 0, turning off.`);
+				//DEBUG console.log(`Device-${device} lowered to 0, turning off.`);
 				setBrightnessPercentage(device, 0);
 				turnOff(device);
 			});
@@ -65,7 +66,7 @@ client.on("redeem", async (_channel, _username, _type, _userData) => {
 		const env = envolope(elapsed);
 		const value = Math.max(0, Math.min(INTENSITY, env * INTENSITY));
 		devices.forEach((device) => {
-			//DEBUG console.log(`Device-${_device} set to ${value}`);
+			//DEBUG console.log(`Device-${device} set to ${value}`);
 			turnOn(device);
 			setBrightnessPercentage(device, value);
 		});
