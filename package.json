@@ -4,13 +4,15 @@
     "test": "npm run build && node build/index.js"
   },
   "dependencies": {
-    "dotenv": "^17.2.3",
+    "@types/node-fetch": "^2.6.13",
+    "dotenv": "^17.2.4",
     "litra": "^4.5.1",
-    "tmi.js": "^1.8.5",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "websocket": "^1.0.35"
   },
   "devDependencies": {
-    "@types/node": "^25.0.6",
-    "@types/tmi.js": "^1.8.6"
+    "@types/node": "^25.2.1",
+    "@types/tmi.js": "^1.8.6",
+    "@types/ws": "^8.18.1"
   }
 }
